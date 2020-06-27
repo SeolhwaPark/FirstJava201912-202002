@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>insert 2</title>
+
+<style>
+	*{margin:0; padding:0; bix-sizing:border-box;}
+	
+	table, th, td{
+		border:1px solid #ccc; margin:0 auto;}
+	
+	.shopList{text-align:center;}
+	
+	.container{width:400px; height:200px; border:100px solid pink;}
+
+</style>
+	
+
+
+<script>
+	function proc(){
+		var kor = score.t_kor.value;
+		var eng = score.t_eng.value;
+		var mat = score.t_mat.value;
+
+		var total = Number(kor) + Number(eng) + Number(mat);
+		var ave = total/3.;
+		score.t_total.value = total;
+		score.t_ave.value = ave;
+		
+		if(ave >= 80){
+			alert("합격");
+			score.t_result.value = "합격";
+		}
+		else {
+			alert("불합격");
+			score.t_result.value = "불합격";
+
+		}
+		
+	}
+
+</script>
+
+
+</head>
+<body>
+	
+	<div class = "container">
+	<!--  표만들기  -->
+	<form name = "score" >
+			<table class = "shopList">
+				<tr>
+					<th>국어</th>
+					<td><input type = "text" name= "t_kor"></td>
+				</tr>
+				
+				<tr>
+					<th>영어</th>
+					<td><input type = "text" name= "t_eng"></td>
+				</tr>
+				
+				<tr>
+					<th>수학</th>
+					<td><input type = "text" name= "t_mat"></td>
+				</tr>
+				
+				<tr>
+					<th>총첨</th>
+					<td><input type = "text" name= "t_total"></td>
+				</tr>
+				
+				<tr>
+					<th>평균</th>
+					<td><input type = "text" name= "t_ave"></td>
+				</tr>
+				
+				<tr>
+					<th>평가</th>
+					<td><input type = "text" name= "t_result"></td>
+				</tr>
+				
+				<tr>
+					<td colspan = "2">
+						<input type = "button" onclick ="proc()" value ="계산">&nbsp;&nbsp;
+						<input type = "reset" value ="다시쓰기">
+					</td>
+				</tr>
+				
+				
+		</table>
+		
+		
+		
+	</form>
+	</div>
+	
+	
+</body>
+</html>

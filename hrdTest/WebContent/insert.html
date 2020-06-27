@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정보처리 산업기사 실기연습</title>
+
+<style>
+	*{margin:0; padding:0; bix-sizing:border-box;}
+	#aaa{color:#f00; font-size:26px; letter-spacing:-1px;
+		border:1px solid #00f; margin-bottom:60px;}
+		
+	.bbb{color:#ccc; font-size:18px; font-familly:"궁서체";
+		border:1px solid #ccc; width:600px; height:60px;
+		text-align:center; line-height:60px; margin:0 auto;
+		background:#00f}
+		
+	.list{list-style:none;}
+	.navi .list li{display:inline-block; width:120px; text-align:center;}
+	
+	a{color:#000; /*흰색 fff (RGB)블루00f 빨강f00 초록 0f0*/
+	text-decoration:none;}
+	
+	table, th, td{
+		border:1px solid #ccc; margin:0 auto;}
+	
+	.shopList{text-align:center;}
+	
+	#aaa h{text-align:center;background:#00f; color:#00f;}
+	#aaa h1{text-align:center;color:#00f;}
+</style>
+
+</head>
+<body>
+	<div id = "aaa">
+		<h1>정보처리산업기사</h1>
+		&lt;div&gt;태그는&nbsp;&nbsp;&nbsp;&nbsp;그룹을만드는 태그입니다&lt;div&gt;
+	</div>
+	
+	<div class = "bbb">
+		그룹만들기 연습중입니다
+	</div>
+	
+	<div class = "navi">
+		<ul class = "list">
+		<!--  순서가 없는 목록 태그 ul -->
+			<li><a href ="com.jsp">회사소개</a></li>
+			<li><a href ="inset.html">상품등록</a></li>
+			<li><a href ="search.jsp">상품검색</a></li>
+			<li><a href ="member.jsp?command=aaa">회원가입</a></li>
+			<li><a href ="delete.html">상품검색</a></li>
+		</ul>
+	</div>
+	<div class = "container">
+	<!--  표만들기  -->
+	<form name = "my" method="post" action="memberInsert.jsp">
+			<table class = "shopList">
+				<tr>
+					<th>아이디</th>
+					<td><input type = "text" name= "id"></td>
+				</tr>
+				
+				
+				<tr>
+					<th>패스워드</th>
+					<td><input type = "password" name= "pw"></td>
+				</tr>
+				
+				
+				<tr>
+					<th>성별</th>
+					<td>
+						<input type = "radio" name= "gender" value="t" checked>남
+						<input type = "radio" name= "gender" value="m">여
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<th>취미</th>
+					<td>
+						<input type = "Checkbox" name= "hobby"value="t">낚시
+						<input type = "Checkbox" name= "hobby">등산
+						<input type = "Checkbox" name= "hobby">볼링
+						<input type = "Checkbox" name= "hobby">게임
+						<input type = "Checkbox" name= "hobby">여행
+					</td>
+					
+				</tr>
+				
+				
+				<tr>
+					<th>부서</th>
+					
+					<td>
+						<select name = "dept">
+							<option value = "aa"> 교육부</option>
+							<option value = "bb"> 홍보부</option>
+							<option value = "cc"> 영업부</option>
+							<option value = "dd"> 경리부</option>
+							
+							
+						</select>
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td colspan = "2">
+						<input type = "submit" value ="저장">&nbsp;&nbsp;
+						<!--  입력갇은 모든값을 action ="" 프로그램으로 
+						전송하여 처리하세요-->
+						<input type = "reset" value ="다시쓰기">
+					</td>
+				</tr>
+				
+				
+		</table>
+		
+		
+		
+	</form>
+	</div>
+	
+	<div class = "footer">
+		<p>copyright All rights reserved.</p>
+	</div>
+	
+</body>
+</html>

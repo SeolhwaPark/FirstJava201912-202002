@@ -1,0 +1,90 @@
+package lotto;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+/*
+ * 출력예시
+ * 게임수 입력:2
+ * 1 :23,10,17,35,40,7
+ * 2 :10,19,30,32,38,22
+ * 
+ * 처리조건
+ * 로또번호는 1~45숫자 중   임의 수 6개,숫자만 + 보너스 1개로 구성된다
+ * ex) 38,27,10,4,40,17 -30
+ * 
+ * 사용자가 입력한 6개의 수치를 비교하여 당첨여부를 결정한다.
+ * 1등 :보너스 번호를 제외한 6개 모두 맞추는 경우
+ * 2등 :6개 중 5개를 맞추고 보너스번호와 일치한 수가 있을 경우
+ * 3등 :보너스번호를 제외한 5개를 맞추는 경우
+ * 4등 :보너스번호를 제외한 4개를 맞추는 경우
+ * 5등 :보너스번호를 제외한 3개를 맞추는 경우
+ * 
+ * 게임결과
+ * 당첨번호 : 10,19,22,28,34,40 - 보너스 7
+ * 1 : 7,10,17,23,35,40 - 꽝
+ * 2 :10,19,22,30,32,38 -5등
+ */
+public class LottoData {
+	Lotto[] lottoo;
+	int cnt;
+	int[] atari = new int[7];
+
+	LottoData(){}
+	
+	LottoData(Lotto[] lottoo,int cnt, String str[] ){
+		this.lottoo = lottoo;
+		this.cnt = cnt;
+		for(int i=0;i<7;i++) {
+			atari[i] = Integer.parseInt(str[i]);
+		}
+	}
+	
+	void lottoPrint() {
+		for(int i=0;i<cnt;i++) {
+			for(int j=0;j<6;j++) {
+				for(int k=0;k<6;k++) {
+					if(lottoo[i].game[j]==atari[k]) lottoo[i].cnt++;
+				}
+				if(lottoo[i].game[j]==atari[6]) lottoo[i].bonus=true;
+			}
+		}
+		
+		for(int i=0;i<cnt;i++) {
+			if(lottoo[i].cnt<3) lottoo[i].rank="꽝";
+			else if(lottoo[i].cnt==3) lottoo[i].rank="5등";
+			else if(lottoo[i].cnt==4) lottoo[i].rank="4등";
+			else if(lottoo[i].cnt==5 && lottoo[i].bonus) lottoo[i].rank="2등";
+			else if(lottoo[i].cnt==5) lottoo[i].rank="3등";
+			else if(lottoo[i].cnt==6) lottoo[i].rank="1등";
+			
+		}
+		
+		System.out.print("당첨번호 : ");
+		for(int i=0;i<atari.length-1;i++) {
+			System.out.print(atari[i]);
+			if(i<6) System.out.print(", ");
+		}
+		System.out.println("ㅡ 보너스 "+atari[6]);
+		for(int i=0;i<cnt;i++) {
+			for(int j=0;j<6;j++) {
+				System.out.print(lottoo[i].game[j]+"\t");
+			}
+			System.out.println(" -- "+lottoo[i].rank);
+		}
+		
+		
+	}
+	void atariPrint() {
+		for(int i=0;i<cnt;i++) {
+			for(int j=0;j<6;j++) {
+				System.out.print(lottoo[i].game[j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+}

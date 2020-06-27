@@ -1,0 +1,32 @@
+/*
+ * 03
+ * *****
+   ****
+   ***
+   **
+   *
+ */
+
+public class Exam_07 {
+	public static void main(String[] args) {
+		System.out.println("예제1번");
+		for(int i=1; i<=5; i++) { //줄 수
+			for(int j=1; j<=5; j++) { //줄당 칸 수
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
+		
+		//예제 2번
+		System.out.println("예제2번");
+		for(int i=1; i<=5; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
+		
+	}
+}
+		
+	

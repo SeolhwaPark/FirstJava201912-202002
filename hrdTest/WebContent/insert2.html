@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>insert 2</title>
+
+<style>
+	*{margin:0; padding:0; bix-sizing:border-box;}
+	
+	table, th, td{
+		border:1px solid #ccc; margin:0 auto;}
+	
+	.shopList{text-align:center;}
+	
+	.container{width:400px; height:200px; border:100px solid pink;}
+
+</style>
+	
+
+
+<script>
+	function proc(){}
+	
+		
+
+</script>
+
+
+</head>
+<body>
+	
+	<div class = "container">
+	<!--  표만들기  -->
+	<form name = "score" >
+			<table class = "shopList">
+				<tr>
+					<th>국어</th>
+					<td><input type = "text" name= "t_kor"></td>
+				</tr>
+				
+				
+				<tr>
+					<th>패스워드</th>
+					<td><input type = "password" name= "t_pw"></td>
+				</tr>
+				
+				
+				<tr>
+					<th>성별</th>
+					<td>
+						<input type = "radio" name= "t_gender" value="남성" checked>남
+						<input type = "radio" name= "t_gender" value="여성">여
+						<input type = "radio" name= "t_gender" value="젠더리스">젠더리스
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<th>취미</th>
+					<td>
+						<input type = "Checkbox" name= "t_hobby1" value="낚시">낚시
+						<input type = "Checkbox" name= "t_hobby2" value="등산">등산
+						<input type = "Checkbox" name= "t_hobby3" value="볼링">볼링
+						<input type = "Checkbox" name= "t_hobby4" value="게임">게임
+						<input type = "Checkbox" name= "t_hobby5" value="여행">여행
+					</td>
+					
+				</tr>
+				
+				
+				<tr>
+					<th>부서</th>
+					<td>
+						<select name = "t_dept">
+							<option value = "교육부"> 교육부</option>
+							<option value = "홍보부"> 홍보부</option>
+							<option value = "영업부"> 영업부</option>
+							<option value = "경리부"> 경리부</option>
+							
+							
+						</select>
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td colspan = "2">
+						<input type = "submit" value ="저장1">&nbsp;&nbsp;
+						<input type = "button" onclick="save2()" value ="저장2">&nbsp;&nbsp;
+						<!--  입력갇은 모든값을 action ="" 프로그램으로 
+						전송하여 처리하세요-->
+						<input type = "reset" value ="다시쓰기">
+					</td>
+				</tr>
+				
+				
+		</table>
+		
+		
+		
+	</form>
+	</div>
+	
+	
+</body>
+</html>

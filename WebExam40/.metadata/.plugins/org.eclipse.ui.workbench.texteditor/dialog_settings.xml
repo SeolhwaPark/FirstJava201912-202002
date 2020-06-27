@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="subject"/>
+		<list key="findhistory">
+			<item value="map"/>
+			<item value="subject"/>
+			<item value="&lt;br&gt;"/>
+			<item value="illust"/>
+			<item value="contents"/>
+			<item value="slider"/>
+			<item value="syste"/>
+			<item value="asdfasdf`"/>
+		</list>
+		<list key="replacehistory">
+			<item value=".jsp"/>
+			<item value="Board/img"/>
+			<item value="Board/img/"/>
+			<item value="Guest/img/"/>
+			<item value="  &lt;c:forEach var=&quot;guest&quot; items=&quot;${list}&quot;&gt;"/>
+			<item value="Guest/img"/>
+			<item value="/img"/>
+			<item value="User/img"/>
+		</list>
+	</section>
+</section>

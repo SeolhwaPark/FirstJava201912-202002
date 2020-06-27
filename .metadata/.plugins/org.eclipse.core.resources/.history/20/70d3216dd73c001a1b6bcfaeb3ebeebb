@@ -1,0 +1,11 @@
+package Stu;
+/* 출력예씨
+* 번호 이름 국어 영어 수학 총점 평균 석차
+*/
+public class School {
+
+	
+	School(){}
+	
+	
+}

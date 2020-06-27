@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function send(){
+		//배열체크는 for
+		for(x=0, flag =0; x<input.gender.length; x++){
+			if(input.gender[x].checked){
+				flag = 1;
+				break;
+			}
+		}
+		if(!flag){
+			alert("성별을 선택하시요");
+			return;
+			//성별체크방법
+		}
+		//취미도
+		for(x=0, flag =0; x<input.fav.length; x++){
+			if(input.fav[x].checked){
+				flag = 1;
+				break;
+			}
+		}
+		if(!flag){
+			alert("취미를 선택하시요");
+			return;
+		}
+		//선택했는지 안했는지 검사
+		if(input.job.selectedIndex ==0){
+			alert("직업을 선택하시오");
+			return;
+			
+		}
+		if(input.job.value ==""){
+			alert("직업을 선택하시오");
+			return;
+			
+		}
+		alert("자료를 전송합니다!");
+		input.action = "script_03_pro.jsp";
+		input.submit();
+		
+	}
+</script>
+
+</head>
+<body>
+
+</form>
+
+	<form name="input" method = "post">
+		<table border="1" width="300">
+			<tr>
+				<td>성별</td>
+				<td>
+					<input type="radio" name="gender" value="M" checked>남자
+					<input type="radio" name="gender" value="F">여자
+				</td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>
+					<input type="checkbox" name="fav" >야구
+					<input type="checkbox" name="fav" >축구
+					<input type="checkbox" name="fav" >농구
+					<input type="checkbox" name="fav" >배구
+				</td>
+			</tr>
+				<tr>
+				<td>직업</td>
+				<td>
+					<select name = "job">
+						<option value = "">직업선택</option>
+						<option value = "학생">학생</option> //value를 써야 데이터전송이 가능해짐
+						<option value = "교사">교사</option>
+						<option value = "군인">군인</option>
+						<option value = "무직">무직</option>
+						
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+				<input type="button" value="전송" onClick="send()">
+				<input type="button" value="취소" onClick="erase()"></td>
+			</tr>
+		</table>
+	</form>
+
+		
+</body>
+</html>

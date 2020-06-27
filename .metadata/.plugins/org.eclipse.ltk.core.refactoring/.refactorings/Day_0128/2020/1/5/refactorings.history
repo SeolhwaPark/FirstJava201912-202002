@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;string&apos; from expression &apos;&quot;번호\t이름\t1\t2\t3\t4\t5\t8\t9\t10\t11\\t12\\t13\\t14\\t15\\t16\\t71점수&quot;&apos;&#x0D;&#x0A;- Original project: &apos;Day_0128&apos;&#x0D;&#x0A;- Variable name: &apos;string&apos;&#x0D;&#x0A;- Destination method: &apos;student.StudentExam.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;&quot;번호\t이름\t1\t2\t3\t4\t5\t8\t9\t10\t11\\t12\\t13\\t14\\t15\\t16\\t71점수&quot;&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;string&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;student{StudentExam.java" name="string" replace="true" selection="631 0" stamp="1580186501430" varType="false" version="1.0"/>
+</session>
